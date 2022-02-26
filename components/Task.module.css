@@ -1,0 +1,22 @@
+.taskWrapper {
+    display: flex;
+    width: max-content;
+    color: var(--text-color);
+    height: auto;
+    background-color: #ff7979;
+    margin: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.taskHeader {
+    font-weight: 600;
+    font-size: clamp(2rem, 1.5vw, 2.5rem);
+    margin-block: 1rem;
+}
+
+.icon {
+    margin-left: auto;
+    cursor: pointer;
+}
