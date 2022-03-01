@@ -1,3 +1,9 @@
 .addTaskButton {
-    margin-top: 10rem;
+    margin: 10rem;
+}
+
+.taskContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
 }

@@ -16,3 +16,8 @@
     font-size: clamp(1rem, 1.2vw, 1.5rem);
     background-color: var(--background-color);
 }
+
+.largeField {
+    border: none;
+    border-bottom: 3px solid black;
+}

@@ -20,3 +20,7 @@
     margin-left: auto;
     cursor: pointer;
 }
+
+.description {
+    max-width: 45ch;
+}

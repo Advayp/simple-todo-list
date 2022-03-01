@@ -25,6 +25,7 @@ export default function Home() {
                     onChange={(e) => {
                         setDescription(e.target.value);
                     }}
+                    large
                 />
                 <br />
             </div>

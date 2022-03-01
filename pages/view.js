@@ -17,30 +17,32 @@ const View = () => {
 
     return (
         <>
-            {tasks?.map((val, idx) => {
-                return (
-                    <Task
-                        name={val.name}
-                        description={val.description}
-                        key={idx}
-                        onDelete={() => {
-                            const modifiedTasks = JSON.parse(
-                                localStorage.getItem("tasks")
-                            );
+            <div className={styles.taskContainer}>
+                {tasks?.map((val, idx) => {
+                    return (
+                        <Task
+                            name={val.name}
+                            description={val.description}
+                            key={idx}
+                            onDelete={() => {
+                                const modifiedTasks = JSON.parse(
+                                    localStorage.getItem("tasks")
+                                );
 
-                            console.log("Removing", modifiedTasks[idx]);
+                                console.log("Removing", modifiedTasks[idx]);
 
-                            modifiedTasks.splice(idx, 1);
+                                modifiedTasks.splice(idx, 1);
 
-                            localStorage.setItem(
-                                "tasks",
-                                JSON.stringify(modifiedTasks)
-                            );
-                            UpdateTasks();
-                        }}
-                    />
-                );
-            })}
+                                localStorage.setItem(
+                                    "tasks",
+                                    JSON.stringify(modifiedTasks)
+                                );
+                                UpdateTasks();
+                            }}
+                        />
+                    );
+                })}
+            </div>
             <div className={styles.addTaskButtonWrapper}>
                 <NextLink href={"/"}>
                     <Button
